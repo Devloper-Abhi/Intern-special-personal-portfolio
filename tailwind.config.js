@@ -1,0 +1,23 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      keyframes: {
+        wave: {
+          '0%': { transform: 'rotate(0deg)' },
+          '15%': { transform: 'rotate(14deg)' },
+          '30%': { transform: 'rotate(-8deg)' },
+          '45%': { transform: 'rotate(14deg)' },
+          '60%': { transform: 'rotate(-4deg)' },
+          '75%': { transform: 'rotate(10deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
+      },
+      animation: {
+        wave: 'wave 1.5s infinite',
+      },
+    },
+  },
+  plugins: [],
+}
