@@ -6,7 +6,7 @@ import Intro from './Components/Intro'
 import About from './Components/About'
 import { useState } from 'react'
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <div className={"scrollbar-hide" + (darkMode ? 'bg-[#181818] text-white' : 'bg-white')}>

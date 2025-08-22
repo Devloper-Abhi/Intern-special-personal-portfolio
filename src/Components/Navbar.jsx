@@ -7,8 +7,8 @@ const Navbar = (props) => {
 
   return (
     <div className={"p-8 flex justify-between items-center w-screen fixed duration-300 "+ (props.darkMode ? 'bg-[#181818] text-white' : 'bg-white' + " z-50")}>
-      <div className="left w-[40%]">
-        <h1 className="text-2xl font-bold p-2">ANISH KUMAR SINHA</h1>
+      <div className="left w-fit">
+        <h1 className="text-xl md:text-2xl font-bold p-2">ANISH KUMAR SINHA</h1>
       </div>
       <div className="menu w-[60%] hidden lg:flex">
         <ul className="flex space-x-4 justify-end items-center w-[100%]">
@@ -74,9 +74,9 @@ const Navbar = (props) => {
       </div>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 w-64 h-full bg-white z-20 flex flex-col items-center justify-center text-center shadow-lg transition-transform duration-300 ${
+        className={` fixed top-0 right-0 w-full h-full  z-100 flex flex-col items-center justify-center text-center shadow-lg transition-transform duration-300 ${
           sidebar ? "translate-x-0" : "translate-x-full"
-        }`}
+        } `+ (props.darkMode ? 'bg-[#181818]' : 'bg-white') }
       >
         <FaTimes
           className="mx-auto text-2xl cursor-pointer mb-8"
